@@ -29,7 +29,7 @@ func TestAuthApi(t *testing.T) {
 	want := "12345678"
 	got, _ := GetAPIKey(headers)
 
-	if reflect.DeepEqual(want, got) {
+	if !reflect.DeepEqual(want, got) {
 		t.Fatalf("expected: %v, got: %v\n", want, got)
 	}
 }
